@@ -32,7 +32,7 @@ public class MapService
 
     public void DisplayMap()
     {
-        Console.WriteLine("\nОБЪЕКТЫ НА КАРТЕ ");
+        Console.WriteLine("ОБЪЕКТЫ НА КАРТЕ ");
         foreach (var marker in _markers)
         {
             marker.Display();

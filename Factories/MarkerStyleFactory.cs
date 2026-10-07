@@ -1,5 +1,4 @@
-﻿
-public class MarkerStyleFactory
+﻿public class MarkerStyleFactory
 {
     private readonly Dictionary<string, MarkerStyle> _styles = new();
 

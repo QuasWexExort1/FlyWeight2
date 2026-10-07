@@ -1,6 +1,4 @@
-﻿
-
-var factory = new MarkerStyleFactory();
+﻿var factory = new MarkerStyleFactory();
 var mapService = new MapService(factory);
 
 mapService.AddPharmacy("ул. Ленина, 15", 54.7104, 20.4522);
@@ -32,7 +30,7 @@ mapService.AddGasStation("пр-т Победы, 140", 54.7099, 20.4133);
 
 mapService.DisplayMap();
 
-Console.WriteLine("\nПРОВЕРКА РАБОТЫ FLYWEIGHT ");
+Console.WriteLine("\nПРОВЕРКА РАБОТЫ FLYWEIGHT");
 
 MarkerStyle style1 = factory.GetStyle("Аптека");
 MarkerStyle style2 = factory.GetStyle("Аптека");
@@ -45,6 +43,6 @@ bool isSameCafe = ReferenceEquals(cafeStyle1, cafeStyle2);
 Console.WriteLine($"Стиль 1 и Стиль 2 для 'Кафе' указывают на один объект: {isSameCafe}");
 
 
-Console.WriteLine("\n--- СТАТИСТИКА ИСПОЛЬЗОВАНИЯ ПАМЯТИ ---");
+Console.WriteLine("\nСТАТИСТИКА ИСПОЛЬЗОВАНИЯ ПАМЯТИ");
 Console.WriteLine($"Всего маркеров на карте: {mapService.GetMarkersCount()}");
 Console.WriteLine($"Всего создано объектов стилей (MarkerStyle): {factory.GetStylesCount()}");
